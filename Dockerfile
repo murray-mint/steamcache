@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM nginx:alpine
 MAINTAINER SteamCache.Net Team <team@steamcache.net>
 
 COPY root/ /

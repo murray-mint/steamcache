@@ -23,7 +23,7 @@ You will need to have a DNS server forwarding queries to the machine your docker
 Run the origin container using the following to allow TCP port 80 (HTTP) through the host machine. Replace `/tmp/steamcache` with a directory to store downloaded data, such as a dedicated hard-drive.
 
 ```
-docker run -it --name steamcache -p 80:80 -v /tmp/steamcache:/data steamcache
+docker run -it --name steamcache -p 80:80 -v /tmp/steamcache:/data kixelated/steamcache:latest
 ```
 
 Add the `-d` argument to run the docker container in the background. Logs can then be accessed using `docker logs steamcache`.
