@@ -18,7 +18,7 @@ This container is designed to support any game that uses HTTP and also supports 
 
 ## Usage
 
-You will need to have a DNS server forwarding queries to the machine your docker container is running on. You can use the [steamcache-dns](https://hub.docker.com/r/steamcache/steamcache-dns/) docker image to do this or you can use a DNS service already on your network see the [steamcache-dns github page](https://github.com/steamcache/steamcache-dns) for more information.
+You will need to have a DNS server forwarding queries to the machine your docker container is running on. You can use the [steamcache-dns](https://hub.docker.com/r/kixelated/steamcache-dns/) docker image to do this or you can use a DNS service already on your network see the [steamcache-dns github page](https://github.com/kixelated/steamcache-dns) for more information.
 
 Run the origin container using the following to allow TCP port 80 (HTTP) through the host machine. Replace `/tmp/steamcache` with a directory to store downloaded data, such as a dedicated hard-drive.
 
@@ -35,8 +35,8 @@ docker run -it --name steamcache -p 80:80 -v /tmp/steamcache:/data kixelated/ste
 ## Quick Explanation
 
 For a steam cache to function on your network you need two services.
-* A depot cache service [This container](https://github.com/steamcache/steamcache)
-* A special DNS service [steamcache-dns](https://github.com/steamcache/steamcache-dns)
+* A depot cache service [This container](https://github.com/kixelated/steamcache)
+* A special DNS service [steamcache-dns](https://github.com/kixelated/steamcache-dns)
 
 The cache service transparently proxies your requests for content to the content procider, or serves the content to you if it already has it.
 
